@@ -1,0 +1,106 @@
+:root {
+
+    --ff: "Montserrat", sans-serif;
+    --bg-dark: oklch(0.1 0.025 264);
+    --bg: oklch(0.15 0.025 264);
+    --bg-light: oklch(0.2 0.025 264);
+    --text: oklch(0.96 0.05 264);
+    --text-muted: oklch(0.76 0.05 264);
+    --highlight: oklch(0.5 0.05 264);
+    --border: oklch(0.4 0.05 264);
+    --border-muted: oklch(0.3 0.05 264);
+    --primary: oklch(0.76 0.1 264);
+    --secondary: oklch(0.76 0.1 84);
+    --danger: oklch(0.7 0.05 30);
+    --warning: oklch(0.7 0.05 100);
+    --success: oklch(0.7 0.05 160);
+    --info: oklch(0.7 0.05 260);
+
+    --shadow-s: inset 0 1px 2px #ffffff30, 
+    0 1px 2px #00000030,
+    0 2px 4px #00000015;
+    
+    --shadow-m: inset 0 1px 2px #ffffff30, 
+    0 2px 4px #00000030,
+    0 4px 8px #00000015;
+    
+    --shadow-l: inset 0 1px 2px #ffffff30, 
+    0 4px 6px #00000030,
+    0 6px 10px #00000015;
+
+
+}
+
+body {
+    display: flex;        
+    gap: 0.5rem;            
+    padding: 1rem;
+    height: 100vh;        
+    box-sizing: border-box;
+    background-color: var(--bg-dark);
+    color: var(--text);
+    font-family: var(--ff);
+    margin: 0;
+}
+
+body.light {
+    --bg-dark: oklch(0.92 0.025 264);
+    --bg: oklch(0.96 0.025 264);
+    --bg-light: oklch(1 0.025 264);
+    --text: oklch(0.15 0.05 264);
+    --text-muted: oklch(0.4 0.05 264);
+    --highlight: oklch(1 0.05 264);
+    --border: oklch(0.6 0.05 264);
+    --border-muted: oklch(0.7 0.05 264);
+    --primary: oklch(0.4 0.1 264);
+    --secondary: oklch(0.4 0.1 84);
+    --danger: oklch(0.5 0.05 30);
+    --warning: oklch(0.5 0.05 100);
+    --success: oklch(0.5 0.05 160);
+    --info: oklch(0.5 0.05 260);
+}
+
+.depth-1 {
+    background-color: var(--bg);
+    box-shadow: var(--shadow-l);
+    border-radius: 10px;
+}
+
+.centered {
+    display: flex;        
+    align-items: center; 
+    justify-content: center;
+}
+
+#content {
+    flex: 3;             
+    display: flex;        
+    flex-direction: column; 
+    gap: 0.5rem;            
+}
+
+#blocks {
+    display: flex;        
+    flex: 1;               
+    flex-direction: column;
+    gap: 0.5rem;            
+}
+
+#blocks-list {
+    flex: 1;              
+}
+
+#nav, #search-blocks {
+    height: 80px;
+}
+
+#search-blocks {
+    margin: 5px;
+    border-radius: 5px;
+    background-color: var(--bg-light);
+    box-shadow: var(--shadow-m);
+}
+
+#sheet {
+    flex: 1; 
+}
