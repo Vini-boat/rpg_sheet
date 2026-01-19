@@ -28,7 +28,7 @@
     0 4px 6px #00000030,
     0 6px 10px #00000015;
 
-
+    --transition: 0.3s ease-in-out;
 }
 
 body {
@@ -103,4 +103,26 @@ body.light {
 
 #sheet {
     flex: 1; 
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 5px;
+}
+
+#toggle_theme {
+    border: none;
+    padding: 1rem;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: var(--shadow-m);
+    background-color: var(--bg-light);
+    cursor: pointer;
+}
+
+#toggle_theme:hover {
+    background-color: var(--highlight);
+    transition: var(--transition);
 }
